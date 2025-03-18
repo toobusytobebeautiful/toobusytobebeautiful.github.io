@@ -1,5 +1,4 @@
 <html>
-
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
@@ -7,29 +6,46 @@
   </head>
   
   <body>
-	<!-- 18/3/2025 18:18-->
-    <a-scene mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/card.mind;" color-space="sRGB" renderer="colorManagement: true, physicallyCorrectLights" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false">
+	<!-- 18/3/2025 18:28-->
+    <a-scene 
+    	mindar-image="imageTargetSrc: https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.5/examples/image-tracking/assets/card-example/card.mind;" 
+    	color-space="sRGB" 
+    	renderer="colorManagement: true, physicallyCorrectLights" 
+    	vr-mode-ui="enabled: false" 
+    	device-orientation-permission-ui="enabled: false"
+    	>
     
-      <a-assets>     
-            <video id="spark-animation-AR-v1-mp4" autoplay="true" controls="false" loop="true" muted="false" src="./assets/spark_animation_AR_v1.mp4" playsinline="" webkit-playsinline=""></video>
-      </a-assets>
+      	<a-assets>     
+            <video 
+            	id="spark-animation" 
+            	src="assets/spark_animation_AR_v1.mp4"
+            	preload="auto" 
+            	autoplay="true" 
+            	controls="false" 
+            	loop
+            	muted="false" 
+            	playsinline
+            	webkit-playsinline
+            	crossorigin
+            >
+            </video>
+      	</a-assets>
 
-      <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
 
-      <a-entity mindar-image-target="targetIndex: 0">
-            <a-video
-                src="#spark-animation-AR-v1-mp4"
-                position='0 0 0'
+      	<a-entity mindar-image-target="targetIndex: 0">
+        	<a-video
+                src="#spark-animation"
+                position="0 0 0"
                 width="1" 
                 height="0.552" 
                 material="" 
                 geometry=""
-                >
+            >
             </a-video>
-      </a-entity>
+      	</a-entity>
       
     </a-scene>
     
   </body>
-  
 </html>
