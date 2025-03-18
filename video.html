@@ -5,16 +5,10 @@
   </head>
   
   <body>
-	<!-- 18/3/2025 19:02-->
-    <a-scene 
-    	mindar-image="imageTargetSrc: targets.mind;" 
-    	color-space="sRGB" 
-    	renderer="colorManagement: true, physicallyCorrectLights" 
-    	vr-mode-ui="enabled: false" 
-    	device-orientation-permission-ui="enabled: false"
-    	>
+	<!-- 18/3/2025 19:06-->
+    <a-scene>
     
-      	<a-assets timeout="30000">     
+      	<a-assets>     
             <video 
             	id="spark-animation" 
             	src="assets/spark_animation_AR_v1.mp4"
@@ -30,19 +24,17 @@
             </video>
       	</a-assets>
 
-      	<a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
+      	<a-camera>
+      		<a-cursor></a-cursor>
+      	</a-camera>
 
-
-        	<a-video
-                src="#spark-animation"
-                position="0 0 0"
-                width="1" 
-                height="0.552" 
-                material="" 
-                geometry=""
-            >
-            </a-video>
-
+        <a-video
+        	src="#spark-animation"
+            position="0 3 -9"
+            width="8" 
+            height="4.5"     
+        >
+        </a-video>
       
     </a-scene>
     
